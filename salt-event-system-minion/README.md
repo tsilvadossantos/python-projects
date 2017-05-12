@@ -1,4 +1,4 @@
-# SaltStack Event System - Minions
+# SaltStack Event System - Minion
 
 This project was developed to meet the following criteria:
 
