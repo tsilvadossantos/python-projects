@@ -1,6 +1,6 @@
 # Docker/Slack API
 
-This project was developed to meet the following criterias:
+This project was developed to meet the following criteria:
 
 Update Slack channel with current docker-container status:
 
