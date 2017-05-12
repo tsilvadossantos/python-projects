@@ -1,6 +1,6 @@
 # SaltStack API
 
-This project was developed to meet the following criterias:
+This project was developed to meet the following criteria:
 
 Use salt-master to update each minion hostname with their peers hostname in a given network.
 
