@@ -11,8 +11,8 @@ import shutil
 __author__ = 'Thiago dos Santos'
 
 """Global Variables"""
-repo_os_path = '/opt/projname/'
-tomcat_projname_path = '/opt/tomcat-projname/'
+repo_os_path = '/path/projname/'
+tomcat_projname_path = '/path/tomcat-projname/'
 war_loc = tomcat_projname_path+'webapps/'
 repo_url = 'REPO_PATH'
 git_command = '/usr/bin/git'
