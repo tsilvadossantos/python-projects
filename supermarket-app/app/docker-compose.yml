@@ -1,0 +1,38 @@
+# Author: Thiago dos Santos
+# 1 - Create a container running MySQL
+# 2 - Create a second container that waits for mysql and populate the db and exits
+# 3 - Create a container running the python flask app (super market)
+version: '2'
+services:
+  mysql-node01:
+    image: tsilvasantosorg/mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=abc123
+    ports:
+      - "3308:3306"
+    networks:
+      - app-tier
+
+  mysql-connect:
+    depends_on:
+      - mysql-node01
+    image: tsilvasantosorg/mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=abc123
+    command: bash -c "./usr/local/bin/create_mysql_db.sh"
+    networks:
+      - app-tier
+
+  supermarket-app:
+    depends_on:
+      - mysql-node01
+    image: tsilvasantosorg/flask-app-supermarket:0.1-rc1
+    ports:
+      - "5000:5000"
+    networks:
+      - app-tier
+    command: "sh -c 'cd /srv/application/src/core && python app.py'"
+
+networks:
+  app-tier:
+    driver: bridge

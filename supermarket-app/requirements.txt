@@ -1,0 +1,11 @@
+futures
+Jinja2
+requests
+six
+wheel
+yoyo-migrations
+websocket-client
+virtualenv
+future
+Flask
+Flask-MySQL
