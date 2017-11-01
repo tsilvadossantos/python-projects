@@ -1,2 +1,0 @@
-http://localhost:<port> component_name
-http://localhost:<port> component_name
