@@ -1,0 +1,20 @@
+1. Printing script Usage
+python ssh_command_execute.py --printusage yes
+
+2. Getting the help menu
+python ssh_command_execute.py --help
+
+3. Getting system uptime
+python ssh_command_execute.py --command "uptime" --hostlist list_of_instances.txt
+
+4. Resuming the SUV Build
+python ssh_command_execute.py --command "nohup /etc/rc.resumebuild > resumebuild.out 2> resumebuild.err < /dev/null &" --hostlist list_of_instances.txt
+
+5. Retrieving disk usage
+python ssh_command_execute.py --command "df --output=pcent /data" --hostlist list_of_instances.txt
+
+6. Copy a file or script to the list of hosts
+python ssh_command_execute.py --scpfile uptime.sh --hostpath '/root' --hostlist list_of_instances.txt
+
+6.1 Executing the copied script in the list of hosts
+python ssh_command_execute.py --command 'bash /root/uptime.sh' --hostlist list_of_instances.txt

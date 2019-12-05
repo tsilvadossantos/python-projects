@@ -1,0 +1,6 @@
+json2yaml==1.1.1
+matplotlib==2.2.3
+pandas==0.22.0
+pyaml==17.12.1
+simplejson==3.13.2
+subprocess32==3.5.3
