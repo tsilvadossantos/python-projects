@@ -1,8 +1,5 @@
 # Python Pandas Log Parser
 
-
-
-
 1. Python 3.7+
 2. pip install pandas==0.23.4
 3. python LogParser.py
